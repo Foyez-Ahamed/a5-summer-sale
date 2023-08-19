@@ -70,13 +70,13 @@
                             <span><img src="./images/halfstar.svg" alt=""></span>
                           </div>
                           <p class="text-xl font-bold">K. Accessories</p>
-                          <p class="text-lg text-gray-400 font-semibold">39.00 TK</p>
+                          <p class="text-lg text-gray-400 font-semibold">39.12 TK</p>
                         </div>
                       </div>
                      <!-- card one -->
 
                       <!-- card two -->
-                      <div class="card h-[370px] shadow-xl cursor-pointer">
+                      <div onclick="purchase(this)" class="card h-[370px] shadow-xl cursor-pointer">
                         <figure class="px-14 pt-14 card-bg">
                           <img src="./images/prod2.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -90,13 +90,13 @@
                             <span><img src="./images/halfstar.svg" alt=""></span>
                           </div>
                           <p class="text-xl font-bold">Furniture</p>
-                          <p class="text-lg text-gray-400 font-semibold">25.00 TK</p>
+                          <p class="text-lg text-gray-400 font-semibold">25.45 TK</p>
                         </div>
                       </div>
                       <!-- card two -->
     
                       <!-- card three -->
-                      <div class="card h-[370px] shadow-xl cursor-pointer">
+                      <div onclick="purchase(this)" class="card h-[370px] shadow-xl cursor-pointer">
                         <figure class="px-14 pt-14 card-bg">
                           <img src="./images/prod3.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -126,7 +126,7 @@
                 <!-- Sportswear cards -->
                 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
                     <!-- card one -->
-                    <div class="card h-[370px] shadow-xl cursor-pointer">
+                    <div onclick="purchase(this)" class="card h-[370px] shadow-xl cursor-pointer">
                         <figure class="px-14 pt-20 card-bg flex justify-center items-center">
                           <img src="./images/prod4.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -146,7 +146,7 @@
                      <!-- card one -->
 
                       <!-- card two -->
-                      <div class="card h-[370px] shadow-xl cursor-pointer">
+                      <div onclick="purchase(this)" class="card h-[370px] shadow-xl cursor-pointer">
                         <figure class="px-14 pt-8 card-bg">
                           <img src="./images/prod5.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -166,7 +166,7 @@
                       <!-- card two -->
     
                       <!-- card three -->
-                      <div class="card h-[370px] shadow-xl cursor-pointer">
+                      <div onclick="purchase(this)" class="card h-[370px] shadow-xl cursor-pointer">
                         <figure class="px-14 pt-14 card-bg">
                           <img src="./images/prod6.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -196,7 +196,7 @@
                 <!-- Kitchenware cards -->
                 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
                     <!-- card one -->
-                    <div class="card h-[370px] shadow-xl cursor-pointer">
+                    <div onclick="purchase(this)" class="card h-[370px] shadow-xl cursor-pointer">
                         <figure class="px-14 pt-8 card-bg">
                           <img src="./images/prod7.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -216,7 +216,7 @@
                      <!-- card one -->
 
                       <!-- card two -->
-                      <div class="card h-[370px] shadow-xl cursor-pointer">
+                      <div onclick="purchase(this)" class="card h-[370px] shadow-xl cursor-pointer">
                         <figure class="px-14 pt-4 card-bg">
                           <img src="./images/prod8.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -236,7 +236,7 @@
                       <!-- card two -->
     
                       <!-- card three -->
-                      <div class="card h-[370px] shadow-xl cursor-pointer">
+                      <div onclick="purchase(this)" class="card h-[370px] shadow-xl cursor-pointer">
                         <figure class="px-14 pt-14 card-bg">
                           <img src="./images/prod9.png" alt="Shoes" class="rounded-xl" />
                         </figure>
@@ -271,8 +271,8 @@
             <h1 class="text-xl font-bold">Have a Cupon?</h1>
                 <div class="form-control mt-7">
                     <div class="input-group">
-                      <input type="text" placeholder="Cupon code" class="input input-bordered" />
-                      <button class="btn btn-bg text-white hover:bg-gray-500">
+                      <input id="apply-input" type="text" placeholder="Cupon code" class="input input-bordered" />
+                      <button id="apply-btn" class="btn btn-bg text-white hover:bg-gray-500" disabled>
                         Apply
                       </button>
                     </div>
@@ -280,24 +280,24 @@
                   <!-- cupon -->
 
                   <!-- dynamic -->
-                  <div>
+                  <div id="purchaseItem" class="mt-10">
 
                   </div>
                   <!-- dynamic -->
 
                   <!-- purchase -->
                   <div class="mt-7">
-                 <p class="text-xl font-bold">Total Price: <span class="font-normal">00</span><span class="font-normal">TK</span></p>
+                 <p class="text-xl font-bold">Total Price: <span id="total" class="font-normal">00</span> <span class="font-normal">TK</span></p>
 
-                 <p class="text-xl font-bold mt-2">Discount: <span class="font-normal">00</span><span class="font-normal">TK</span></p>
+                 <p class="text-xl font-bold mt-2">Discount: <span class="font-normal" id="discount">00</span><span class="font-normal">TK</span></p>
 
-                <p class="text-xl font-bold mt-2">Total: <span class="font-normal">00</span><span class="font-normal">TK</span></p>
+                <p class="text-xl font-bold mt-2">Total: <span id="total-after" class="font-normal">00</span><span class="font-normal">TK</span></p>
                   </div>
                    <!-- purchase -->
 
                    <!-- purchase button -->
                    <div class="mt-10">
-                    <button class="w-full btn btn-bg text-white hover:bg-gray-400">Make Purchase</button>
+                    <button id="purchase-btn" class="w-full btn btn-bg text-white hover:bg-gray-400" disabled>Make Purchase</button>
                    </div>
                    <!-- purchase button -->
         </div>
@@ -308,6 +308,7 @@
    <!-- main section end here -->
 
    <!-- javascript connected link -->
+   <script src="./js/utility.js"></script>
    <script src="./js/summersale.js"></script>
 </body>
 </html>
