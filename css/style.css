@@ -5,6 +5,16 @@ body{
 .banner-background-color{
   background-color: #F9F6E2;
 }
+.main-bg{
+    background-color: #F8F8F8;
+}
+.btn-bg{
+    background-color: #E527B2;
+}
 .common-text-color{
     color: #111;
+}
+
+.card-bg{
+    background: rgba(17, 17, 17, 0.05);
 }
