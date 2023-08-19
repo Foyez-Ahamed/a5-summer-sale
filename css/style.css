@@ -1,3 +1,10 @@
 body{
     font-family: 'Work Sans', sans-serif;
 }
+
+.banner-background-color{
+  background-color: #F9F6E2;
+}
+.common-text-color{
+    color: #111;
+}
