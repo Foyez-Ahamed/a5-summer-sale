@@ -1,7 +1,8 @@
 let total = 0;
 
 function purchase(data){
-    const purchaseItem = document.getElementById('purchaseItem')
+    const purchaseItem = document.getElementById('purchaseItem');
+
     const itemName = data.childNodes[3].childNodes[3].innerText;
 
     const createLi = document.createElement('li');
@@ -14,9 +15,9 @@ function purchase(data){
 
     purchaseItem.appendChild(createLi);
 
-    const purchaseItems = data.childNodes[3].childNodes[5].innerText.split(" ")[0];
+    const purchaseItemsPrice = data.childNodes[3].childNodes[5].innerText.split(" ")[0];
 
-    total = parseFloat(total) + parseFloat(purchaseItems);
+    total = parseFloat(total) + parseFloat(purchaseItemsPrice);
 
 
     const purchaseTotal = document.getElementById('total');
@@ -47,27 +48,27 @@ function purchase(data){
 
 document.getElementById('apply-btn').addEventListener('click', function(){
 
-    const cuponInput = document.getElementById('apply-input');
+    const couponInput = document.getElementById('apply-input');
 
-    const getCuponInputValue = cuponInput.value;
+    const getCouponInputValue = couponInput.value;
 
-    cuponInput.value = "";
+    couponInput.value = "";
 
-    if(getCuponInputValue === ""){
-        alert('Please provide your cupon code!');
+    if(getCouponInputValue === ""){
+        alert('Please provide your coupon code!');
         return;
-    } else if(getCuponInputValue !== 'SELL200'){
-        alert ('Please provide your cupon code!');
+    } else if(getCouponInputValue !== 'SELL200'){
+        alert ('Please provide your coupon code!');
         return;
     } else{
         const discountId = document.getElementById('discount');
-    const afterDiscountTotalid =  document.getElementById('total-after');
+        const afterDiscountTotalId =  document.getElementById('total-after');
 
-    discount = (total) * .20;
+    discount = total * .20;
     afterDiscountTotal = total - discount;
 
     discountId.innerText = discount.toFixed(2);
-    afterDiscountTotalid.innerText = afterDiscountTotal.toFixed(2);
+    afterDiscountTotalId.innerText = afterDiscountTotal.toFixed(2);
     }
 
 });

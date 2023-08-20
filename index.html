@@ -49,6 +49,7 @@
    <main class="max-w-screen-xl mx-auto px-8 md:px-16 lg:px-16 py-10 main-bg">
 
     <section class="flex flex-col md:flex-col-reverse lg:flex-row gap-6">
+
         <!-- products cards -->
         <div>
          <!-- first(Kitchenware) -->
@@ -90,7 +91,7 @@
                             <span><img src="./images/halfstar.svg" alt=""></span>
                             <span><img src="./images/halfstar.svg" alt=""></span>
                           </div>
-                          <p class="text-xl font-bold">Furniture</p>
+                          <p class="text-xl font-bold">K.Accessories</p>
                           <p class="text-lg text-gray-400 font-semibold">25.00 TK</p>
                         </div>
                       </div>
@@ -268,23 +269,23 @@
         <!-- purchase products -->
         <div class="mt-20 ">
 
-            <!-- cupon -->
-            <h1 class="text-xl font-bold">Have a Cupon?</h1>
+            <!-- coupon -->
+            <h1 class="text-xl font-bold">Have a Coupon?</h1>
                 <div class="form-control mt-7 bg-white">
                     <div class="input-group">
-                      <input id="apply-input" type="text" placeholder="Cupon code" class="input input-bordered" />
+                      <input id="apply-input" type="text" placeholder="Coupon code" class="input input-bordered" />
                       <button id="apply-btn" class="btn btn-bg text-white capitalize hover:bg-gray-500" disabled>
                         Apply
                       </button>
                     </div>
                   </div>
-                  <!-- cupon -->
+                  <!-- coupon -->
 
-                  <!-- dynamic -->
+                  <!-- dynamic item name -->
                   <div id="purchaseItem" class="mt-10 border-b-2 p-3 bg-white">
 
                   </div>
-                  <!-- dynamic -->
+                  <!-- dynamic item name-->
 
                   <!-- purchase -->
                   <div class="mt-7 border-b-2 p-3 bg-white">
@@ -298,16 +299,16 @@
 
                    
                    <!-- purchase button -->
-    <!-- Open the modal using ID.showModal() method -->
+  
   <button id="purchase-btn" class="btn w-full mt-10 btn btn-bg text-white capitalize font-bold hover:bg-gray-400" onclick="my_modal_5.showModal()" disabled>Make Purchase</button>
   <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
   <form method="dialog" class="modal-box text-center">
-    <img class=" ml-20 lg:ml-[150px]" src="./images/congo.png" alt="">
+    <img class=" ml-[110px] md:ml-[150px] lg:ml-[150px]" src="./images/congo.png" alt="">
     <h3 class="font-bold text-2xl">Congratulations</h3>
     <p class="py-4 text-gray-500">Your Purchase the product</p>
     <div>
-      <!-- if there is a button in form, it will close the modal -->
-     <a id="modal-home" onclick="window.location.reload();" href="index.html"> <button class="btn btn-bg text-white text-center hover:bg-gray-500">Go Home</button></a>
+    
+     <a id="modal-home" onclick="window.location.reload();" href="index.html"> <button class="btn btn-bg text-white text-center hover:bg-gray-500 capitalize">Go Home</button></a>
     </div>
   </form>
 </dialog>
@@ -322,7 +323,6 @@
    <!-- main section end here -->
 
    <!-- javascript connected link -->
-   <script src="./js/utility.js"></script>
    <script src="./js/summersale.js"></script>
 </body>
 </html>
