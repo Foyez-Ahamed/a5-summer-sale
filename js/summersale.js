@@ -18,18 +18,11 @@ function purchase(data){
 
     total = parseFloat(total) + parseFloat(purchaseItems);
 
-    discount = total * 0.20;
-
-    totalAfterDiscount = total - discount;
-
 
     const purchaseTotal = document.getElementById('total');
-    const productDiscount = document.getElementById('discount');
-    const AfterDiscountTotal = document.getElementById('total-after');
 
     purchaseTotal.innerText = total;
-    productDiscount.innerText = discount;
-    AfterDiscountTotal.innerText = totalAfterDiscount;
+    
 
     const purchaseButton = document.getElementById('purchase-btn');
 
@@ -47,8 +40,43 @@ function purchase(data){
     } else{
         applyButton.setAttribute('disabled', true);
     }
-}
+};
 
+
+document.getElementById('apply-input').addEventListener('keyup' ,function(e){
+
+   const applyBtn = document.getElementById('apply-btn');
+
+   const getInputValue = e.target.value;
+   
+   if((getInputValue === "SELL200") && (total >= 200)){
+    applyBtn.removeAttribute('disabled');
+   } else{
+    applyBtn.setAttribute('disabled', true);
+   }
+
+});
+
+
+document.getElementById('apply-btn').addEventListener('click', function(){
+
+    // console.log(total.toFixed(2));
+
+    const cuponInput = document.getElementById('apply-input');
+
+    cuponInput.value = "";
+
+    const discountId = document.getElementById('discount');
+    const afterDiscountTotalid =  document.getElementById('total-after');
+
+    discount = (total) * 0.20;
+    afterDiscountTotal = total - discount;
+
+    discountId.innerText = discount;
+    afterDiscountTotalid.innerText = afterDiscountTotal;
+
+
+});
 
 
 // document.getElementById('apply-input').addEventListener('keyup', function(e){
