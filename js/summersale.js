@@ -44,31 +44,23 @@ function purchase(data){
 };
 
 
-// document.getElementById('apply-input').addEventListener('keyup' ,function(e){
 
-//    const applyBtn = document.getElementById('apply-btn');
-
-//    const getInputValue = e.target.value;
-   
-//    if(getInputValue === "SELL200"){
-//      applyBtn.removeAttribute('disabled');
-//    } else{
-//      applyBtn.setAttribute('disabled', true);
-//    }
-
-// });
-
-
-document.getElementById('apply-btn').addEventListener('click', function(e){
+document.getElementById('apply-btn').addEventListener('click', function(){
 
     const cuponInput = document.getElementById('apply-input');
 
     const getCuponInputValue = cuponInput.value;
-    
 
     cuponInput.value = "";
 
-    const discountId = document.getElementById('discount');
+    if(getCuponInputValue === ""){
+        alert('Please provide your cupon code!');
+        return;
+    } else if(getCuponInputValue !== 'SELL200'){
+        alert ('Please provide your cupon code!');
+        return;
+    } else{
+        const discountId = document.getElementById('discount');
     const afterDiscountTotalid =  document.getElementById('total-after');
 
     discount = (total) * 0.20;
@@ -76,5 +68,6 @@ document.getElementById('apply-btn').addEventListener('click', function(e){
 
     discountId.innerText = discount.toFixed(2);
     afterDiscountTotalid.innerText = afterDiscountTotal.toFixed(2);
+    }
 
 });
