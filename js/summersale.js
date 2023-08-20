@@ -60,8 +60,6 @@ document.getElementById('apply-input').addEventListener('keyup' ,function(e){
 
 document.getElementById('apply-btn').addEventListener('click', function(){
 
-    // console.log(total.toFixed(2));
-
     const cuponInput = document.getElementById('apply-input');
 
     cuponInput.value = "";
@@ -77,20 +75,3 @@ document.getElementById('apply-btn').addEventListener('click', function(){
 
 
 });
-
-
-// document.getElementById('apply-input').addEventListener('keyup', function(e){
-
-//     const applyButton = document.getElementById('apply-btn');
-//     const getInputValue = e.target.value;
-
-//     getInputValue.value = "";
-
-//     if(getInputValue === 'SELL200'){
-//         applyButton.removeAttribute('disabled')
-//     } else{
-//         applyButton.setAttribute('disabled');
-//     }
-    
-
-// });
