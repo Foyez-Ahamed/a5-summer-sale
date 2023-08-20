@@ -21,7 +21,7 @@ function purchase(data){
 
     const purchaseTotal = document.getElementById('total');
 
-    purchaseTotal.innerText = total;
+    purchaseTotal.innerText = total.toFixed(2);
     
 
     const purchaseButton = document.getElementById('purchase-btn');
@@ -32,35 +32,39 @@ function purchase(data){
         purchaseButton.setAttribute('disabled', true);
     }
 
-    const applyButton =  document.getElementById('apply-btn');
 
+    const applyButton = document.getElementById('apply-btn');
 
     if(total >= 200){
         applyButton.removeAttribute('disabled');
     } else{
-        applyButton.setAttribute('disabled', true);
+        applyButton.setAttribute('disabled');
     }
+ 
 };
 
 
-document.getElementById('apply-input').addEventListener('keyup' ,function(e){
+// document.getElementById('apply-input').addEventListener('keyup' ,function(e){
 
-   const applyBtn = document.getElementById('apply-btn');
+//    const applyBtn = document.getElementById('apply-btn');
 
-   const getInputValue = e.target.value;
+//    const getInputValue = e.target.value;
    
-   if((getInputValue === "SELL200") && (total >= 200)){
-    applyBtn.removeAttribute('disabled');
-   } else{
-    applyBtn.setAttribute('disabled', true);
-   }
+//    if(getInputValue === "SELL200"){
+//      applyBtn.removeAttribute('disabled');
+//    } else{
+//      applyBtn.setAttribute('disabled', true);
+//    }
 
-});
+// });
 
 
-document.getElementById('apply-btn').addEventListener('click', function(){
+document.getElementById('apply-btn').addEventListener('click', function(e){
 
     const cuponInput = document.getElementById('apply-input');
+
+    const getCuponInputValue = cuponInput.value;
+    
 
     cuponInput.value = "";
 
@@ -70,8 +74,7 @@ document.getElementById('apply-btn').addEventListener('click', function(){
     discount = (total) * 0.20;
     afterDiscountTotal = total - discount;
 
-    discountId.innerText = discount;
-    afterDiscountTotalid.innerText = afterDiscountTotal;
-
+    discountId.innerText = discount.toFixed(2);
+    afterDiscountTotalid.innerText = afterDiscountTotal.toFixed(2);
 
 });

@@ -272,7 +272,7 @@
                 <div class="form-control mt-7 bg-white">
                     <div class="input-group">
                       <input id="apply-input" type="text" placeholder="Cupon code" class="input input-bordered" />
-                      <button id="apply-btn" class="btn btn-bg text-white hover:bg-gray-500" disabled>
+                      <button id="apply-btn" class="btn btn-bg text-white capitalize hover:bg-gray-500" disabled>
                         Apply
                       </button>
                     </div>
@@ -289,17 +289,30 @@
                   <div class="mt-7 border-b-2 p-3 bg-white">
                  <p class="text-xl font-bold">Total Price: <span id="total" class="font-normal">00</span> <span class="font-normal">TK</span></p>
 
-                 <p class="text-xl font-bold mt-2">Discount: <span class="font-normal" id="discount">00</span><span class="font-normal">TK</span></p>
+                 <p class="text-xl font-bold mt-2">Discount: <span class="font-normal" id="discount">00</span> <span class="font-normal">TK</span></p>
 
-                <p class="text-xl font-bold mt-2">Total: <span id="total-after" class="font-normal">00</span><span class="font-normal">TK</span></p>
+                <p class="text-xl font-bold mt-2">Total: <span id="total-after" class="font-normal">00</span> <span class="font-normal">TK</span></p>
                   </div>
                    <!-- purchase -->
 
+                   
                    <!-- purchase button -->
-                   <div class="mt-10 border-b-2">
-                    <button id="purchase-btn" class="w-full btn btn-bg text-white hover:bg-gray-400" disabled>Make Purchase</button>
-                   </div>
-                   <!-- purchase button -->
+    <!-- Open the modal using ID.showModal() method -->
+  <button id="purchase-btn" class="btn w-full mt-10 btn btn-bg text-white capitalize font-bold hover:bg-gray-400" onclick="my_modal_5.showModal()" disabled>Make Purchase</button>
+  <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+  <form method="dialog" class="modal-box text-center">
+    <img class=" ml-20 lg:ml-[150px]" src="./images/congo.png" alt="">
+    <h3 class="font-bold text-2xl">Congratulations</h3>
+    <p class="py-4 text-gray-500">Your Purchase the product</p>
+    <div>
+      <!-- if there is a button in form, it will close the modal -->
+     <a id="modal-home" onclick="window.location.reload();" href="index.html"> <button class="btn btn-bg text-white text-center hover:bg-gray-500">Go Home</button></a>
+    </div>
+  </form>
+</dialog>
+    <!-- purchase button -->
+
+
         </div>
          <!-- purchase products -->
     </section>
