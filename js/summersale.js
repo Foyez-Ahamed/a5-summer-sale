@@ -63,7 +63,7 @@ document.getElementById('apply-btn').addEventListener('click', function(){
         const discountId = document.getElementById('discount');
     const afterDiscountTotalid =  document.getElementById('total-after');
 
-    discount = (total) * 0.20;
+    discount = (total) * .20;
     afterDiscountTotal = total - discount;
 
     discountId.innerText = discount.toFixed(2);
